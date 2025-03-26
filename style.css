@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #84aea1, #b7d3c6);
@@ -34,46 +35,42 @@ body {
     width: 100%;
 }
 
-.box:last-child {
-    border: 3px solid #737dbc;
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .main-header {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .container {
+        grid-template-columns: 1fr; /* 한 개의 열 */
+    }
+    img {
+        width: 100%;
+    }
 }
 
-img {
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-    border: 5px solid #84aea1;
-    transition: transform 0.3s ease-in-out;
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-header {
+        font-size: 1.5em;
+        width: 90%;
+    }
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 두 개의 열 */
+    }
+    img {
+        max-width: 80%;
+    }
 }
 
-img:hover {
-    transform: scale(1.1);
-    border-color: #737dbc;
+@media (min-width: 1025px) {
+    .main-header {
+        font-size: 2em;
+    }
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 세 개의 열 */
+        max-width: 1200px;
+    }
 }
 
-ul, ol {
-    padding-left: 20px;
-}
-
-ul li, ol li {
-    margin: 10px 0;
-}
-
-ul li strong, ol li em {
-    color: #737dbc;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #737dbc;
-}
-
-a:focus {
-    outline: 2px dashed #007BFF;
-}
