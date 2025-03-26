@@ -35,6 +35,54 @@ body {
     width: 100%;
 }
 
+.box:last-child {
+    border: 3px solid #737dbc;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 5px solid #84aea1;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.1);
+    border-color: #737dbc;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 10px 0;
+}
+
+ul li strong, ol li em {
+    color: #737dbc;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #737dbc;
+}
+
+a:focus {
+    outline: 2px dashed #007BFF;
+}
+
+/* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -44,26 +92,35 @@ body {
         font-size: 1.2em;
     }
     .container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+    }
+    .box {
+        font-size: 0.9em;
     }
     img {
         width: 100%;
+        max-width: 250px;
     }
 }
 
+/* Tablet (601px - 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .main-header {
         font-size: 1.5em;
         width: 90%;
     }
     .container {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box {
+        font-size: 1em;
     }
     img {
         max-width: 80%;
     }
 }
 
+/* Desktop (1025px and above) */
 @media (min-width: 1025px) {
     .main-header {
         font-size: 2em;
@@ -72,5 +129,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
     }
+    .box {
+        font-size: 1.1em;
+    }
 }
-
