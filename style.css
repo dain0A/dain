@@ -45,9 +45,6 @@ img {
     border-radius: 10px;
     border: 5px solid #84aea1;
     transition: transform 0.3s ease-in-out;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
 }
 
 img:hover {
@@ -82,7 +79,6 @@ a:focus {
     outline: 2px dashed #007BFF;
 }
 
-/* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -103,7 +99,6 @@ a:focus {
     }
 }
 
-/* Tablet (601px - 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .main-header {
         font-size: 1.5em;
@@ -120,7 +115,6 @@ a:focus {
     }
 }
 
-/* Desktop (1025px and above) */
 @media (min-width: 1025px) {
     .main-header {
         font-size: 2em;
